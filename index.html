@@ -4,16 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>eeuu.cc.cd</title>
+    
+    <link rel="icon" type="image/png" href="favicon.png">
+
     <script>
         // Redirección si entra desde el subdominio de pages.dev
         if (window.location.hostname === "mivo-cc-cd.pages.dev") {
             window.location.replace("https://eeuu.cc.cd");
         }
     </script>
+    
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f9f9f9;
+            
+            /* Fondo con el favicon repetido en cuadrícula */
+            background-image: url('favicon.png');
+            background-repeat: repeat;
+            background-size: 64px 64px; /* Ajusta este tamaño (ej. 32px, 48px, 64px) según qué tan grandes quieras los cuadros del fondo */
+            
             color: #222;
             display: flex;
             justify-content: center;
@@ -27,10 +36,11 @@
         .container {
             max-width: 650px;
             padding: 40px;
-            background: #ffffff;
+            background: rgba(255, 255, 255, 0.95); /* Fondo blanco con ligera opacidad para que no se mezcle con los favicons de atrás */
             border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
             border: 1px solid #eaeaea;
+            backdrop-filter: blur(4px); /* Efecto difuminado moderno sobre el fondo repetido */
         }
         h1 {
             font-size: 2.5rem;
@@ -62,8 +72,7 @@
             This domain is hosted on Cloudflare and is strictly used for APIs and testing purposes.
         </p>
         <div class="footer">
-            Owner: Quasvx
-            Thanks DNSHE.
+            Owner: quasvx
         </div>
     </div>
 
